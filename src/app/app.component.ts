@@ -12,6 +12,7 @@ export class AppComponent {
   resultado: number;
 
   onSumar(): void{
+    console.log ('estoy dentro de onSumar');
     this.resultado = this.operandoA + this.operandoB;
   }
 }
