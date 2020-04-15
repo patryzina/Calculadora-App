@@ -1,38 +1,28 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>Aplicación de Calculadora</h1>
-    </div>
+<h1>{{titulo}}</h1>
+<form>
+  <div class="form-group">
+    <label>Operando A</label>
+    <input
+    type="number"
+    class ="form-control"
+    placeholder="Escribe el operando A"
+    [(ngModel)] ="operandoA"
+    name="operandoA"
+    />
   </div>
-
-  <div class="row">
-    <div class="col">
-          <ul class="nav navbar-nav">
-            <li><a><label>Operando A</label></a></li>
-            <li>
-              <a>
-                <input
-                type="text"
-                class = "form-control">
-              </a>
-            </li>
-            <li><a><label>Operando B</label></a></li>
-            <li>
-              <a>
-                <input
-                 type="text"
-                 class = "form-control">
-              </a>
-            </li>
-            <li>
-              <a>
-                <button [disabled] = "activo" (click)= "sumarOperandos()" class="btn btn-primary">
-                  Sumar
-                </button>
-                <app-calculadora></app-calculadora>
-              </a>
-            </li>
-          </ul>
-        </div>
-    </div>
+  <div class="form-group">
+    <label>Operando B</label>
+    <input
+    type="number"
+    class ="form-control"
+    placeholder="Escribe el operando B"
+    [(ngModel)] ="operandoB"
+    name="operandoB"
+    />
+  </div>
+  <button type="ng-submit" class="btn btn-primary"
+  (click)="onSumar()">Sumar</button>
+</form>
+<p>El resultado es : </p><p>{{resultado}}</p>
 </div>

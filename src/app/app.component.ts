@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Calculadora-App';
+  titulo = 'Aplicación de Calculadora';
+  operandoA: number;
+  operandoB: number;
+  resultado: number;
+
+  onSumar(): void{
+    console.log ('estoy dentro de onSumar');
+    this.resultado = this.operandoA + this.operandoB;
+  }
 }
